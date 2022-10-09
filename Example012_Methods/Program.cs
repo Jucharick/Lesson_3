@@ -14,7 +14,7 @@ void Method2(string msg)
 
 Method2(msg: "Текст сообщения");
 
-void Method21 (string msg, int count)
+void Method21(string msg, int count)
 {
     int i = 0;
     while (i < count)
@@ -35,18 +35,31 @@ int year = Method3();
 Console.WriteLine(year);
 
 // Группа 4 - принимает и возвращает
+// string Method4(int count, string text)
+// {
+//     int i = 0;
+//     string result = String.Empty; // так принято указывать, что строка result пустая
+
+//     while (i < count)
+//     {
+//         result = result + text;
+//         i++;
+//     }
+//     return result;
+// }
+
+// string res = Method4(10, "deodkeo ");
+// Console.WriteLine(res);
+
 string Method4(int count, string text)
 {
-    int i = 0;
-    string result = String.Empty; // так принято указывать, что строка result пустая
-
-    while (i < count)
+    string result = String.Empty;
+    for (int i = 0; i < count; i++)
     {
         result = result + text;
-        i++;
     }
     return result;
 }
 
-string res = Method4(10, "deodkeo ");
+string res = Method4(10, "z ");
 Console.WriteLine(res);
